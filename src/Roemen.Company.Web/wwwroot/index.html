@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="h-100">
 
 <head>
@@ -7,12 +7,20 @@
 	<title>Roemen Company ~ Digital Agency, Software Development, System Administration</title>
 	<base href="/" />
 	<link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/@knekk/spinners@0.0.21/dist/kSpinners.css">
 	<link href="styles.min.css" rel="stylesheet" />
-	<!--<meta name="theme-color" content="#7952b3">-->
 </head>
 
 <body class="h-100 text-center text-white bg-dark">
-	<app class="d-flex h-100">Loading...</app>
+	<app class="d-flex h-100">
+		<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+			<header class="mb-auto"></header>
+			<main class="px-3">
+				<i class="k-spinner--swirl"></i>
+			</main>
+			<footer class="mt-auto"></footer>
+		</div>
+	</app>
 	<script src="_framework/blazor.webassembly.js"></script>
 
 	<!-- Start Single Page Apps for GitHub Pages -->
