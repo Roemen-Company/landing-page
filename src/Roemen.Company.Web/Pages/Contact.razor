@@ -1,0 +1,16 @@
+@page "/contact"
+@inject IJSRuntime JSRuntime
+
+<div class="typeform-widget" data-url="https://form.typeform.com/to/yhRnHc3M" data-transparency="50" data-hide-headers=true data-hide-footer=true style="width: 100%; height: 500px;"></div>
+<div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;">
+	powered by <a href="https://admin.typeform.com/signup?utm_campaign=yhRnHc3M&utm_source=typeform.com-01EDAHYBVF8JG6MBPWXDBXVSQX-free&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN" style="color: #999" target="_blank">Typeform</a>
+</div>
+
+@code
+{
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		await JSRuntime.InvokeVoidAsync("window.rc.initContact");
+	}
+
+}

@@ -1,0 +1,28 @@
+@page "/"
+
+<p><img src="/images/logo.webp" alt="Roemen Company" /></p>
+<p class="lead pb-5">
+	We create customized software and web solutions that are used and loved by our clients and their consumers.
+</p>
+<p class="lead">
+	<a href="@MailTo" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white" @onclick="UpdateMailTo">Contact</a>
+</p>
+
+@code
+{
+	private string MailTo;
+
+	private void UpdateMailTo(MouseEventArgs e)
+	{
+		const string contact = "Y29udGFjdEByb2VtZW4uY28=";
+		var email = Decode(contact);
+		MailTo = $"mailto:{email}";
+
+	}
+
+	private static string Decode(string base64EncodedData)
+	{
+		var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
+		return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
+	}
+}
